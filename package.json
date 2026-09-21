@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "a project management application",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js"
@@ -19,6 +20,9 @@
     "prettier": "3.9.6"
   },
   "dependencies": {
-    "dotenv": "^17.4.2"
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.1"
   }
 }
