@@ -64,4 +64,7 @@ Userschema.pre("save", async function (next) {
   this.password = await brcypt.hash(this.password, 10);
   next();
 });
+Userschema.methods.ispasswordcorrect = async function (password) {
+  return await brcypt.compare(password, this.password);
+};
 export const User = mongoose.model("User", userSchema);
